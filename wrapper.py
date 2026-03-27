@@ -37,15 +37,15 @@ DEVICE_CPU=1
 
 #-----TENSOR INFORMAATION----------
 #unit32_t tensor_id(tensor_t* t); this will give yoe the id of the tensor
-# tensor_lib.tensor_id.argtypes=[ctypes.c_void_p]
-# tensor_lib.tensor_id.restype=ctypes.c_uint32
+tensor_lib.tensor_id.argtypes=[ctypes.c_void_p]
+tensor_lib.tensor_id.restype=ctypes.c_uint32
 
 # #------MEMORY POOL----------------
 
 # # tensor_pool_t* tensor_pool_create(size_t capacity_bytes);
 
-# tensor_lib.tensor_pool_create.argtypes=[ctypes.c_size_t,ctypes.c_bool]
-# tensor_lib.tensor_pool_create.restype=ctypes.c_void_p
+tensor_lib.tensor_pool_create.argtypes=[ctypes.c_size_t,ctypes.c_bool]
+tensor_lib.tensor_pool_create.restype=ctypes.c_void_p
 
 
 #--------TENSOR CREATION & DATA ------------
@@ -126,12 +126,12 @@ tensor_lib.tensor_print_data.argtypes=[ctypes.c_void_p]
 tensor_lib.tensor_print_data.restype=None
 
 # bool tensor_fill_random_normal(tensor_t*t,float mean,float std_dev);
-# tensor_lib.tensor_fill_random_normal.argtypes=[
-#     ctypes.c_void_p,
-#     ctypes.c_float,
-#     ctypes.c_float
-# ]
-# tensor_lib.tensor_fill_random_normal.restype=ctypes.c_bool
+tensor_lib.tensor_fill_random_normal.argtypes=[
+    ctypes.c_void_p,
+    ctypes.c_float,
+    ctypes.c_float
+]
+tensor_lib.tensor_fill_random_normal.restype=ctypes.c_bool
 
 
 
@@ -259,3 +259,13 @@ tensor_lib.tensor_add.restype=ctypes.c_void_p
 #     ctypes.c_void_p
 # ]
 # tensor_lib.tensor_graph_backward_evaluate.restype=ctypes.c_bool
+
+#--------GRAPH OPERATIONS (DONE)----------
+
+# int32_t getPosOfNode(execution_node_t *et);
+tensor_lib.getPosOfNode.argtypes=[ctypes.c_void_p]
+tensor_lib.getPosOfNode.restype=ctypes.c_int32
+
+# void printExecutionNode(execution_node_t *et);
+tensor_lib.printExecutionNode.argtypes=[ctypes.c_void_p]
+tensor_lib.printExecutionNode.restype=None
