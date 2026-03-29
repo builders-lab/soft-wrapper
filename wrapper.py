@@ -262,10 +262,10 @@ tensor_lib.tensor_add.restype=ctypes.c_void_p
 
 #--------GRAPH OPERATIONS (DONE)----------
 
-# int32_t getPosOfNode(execution_node_t *et);
-tensor_lib.getPosOfNode.argtypes=[ctypes.c_void_p]
-tensor_lib.getPosOfNode.restype=ctypes.c_int32
+# # int32_t getPosOfNode(execution_node_t *et);
+# tensor_lib.getPosOfNode.argtypes=[ctypes.c_void_p]
+# tensor_lib.getPosOfNode.restype=ctypes.c_int32
 
-# void printExecutionNode(execution_node_t *et);
-tensor_lib.printExecutionNode.argtypes=[ctypes.c_void_p]
-tensor_lib.printExecutionNode.restype=None
+# # void printExecutionNode(execution_node_t *et);
+# tensor_lib.printExecutionNode.argtypes=[ctypes.c_void_p]
+# tensor_lib.printExecutionNode.restype=None
