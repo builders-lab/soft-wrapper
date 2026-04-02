@@ -211,8 +211,11 @@ tensor_lib.tensor_add.restype=ctypes.c_void_p
 
 # bool tensor_evaluate(tensor_pool_t*pool, tensor_t*t);
 # tensor_lib.tensor_evaluate.argtypes=[
-#     ctypes.c_void_p,
-#     ctypes.c_void_p
+#     ctypes.c_void_p,                 
+#     ctypes.c_void_p,                 
+#     ctypes.POINTER(ctypes.c_float),  
+#     ctypes.POINTER(ctypes.c_float),  
+#     ctypes.POINTER(ctypes.c_float)   
 # ]
 # tensor_lib.tensor_evaluate.restype=ctypes.c_bool
 
@@ -269,3 +272,15 @@ tensor_lib.tensor_add.restype=ctypes.c_void_p
 # # void printExecutionNode(execution_node_t *et);
 # tensor_lib.printExecutionNode.argtypes=[ctypes.c_void_p]
 # tensor_lib.printExecutionNode.restype=None
+
+# tensor_lib.tensor_evaluate_GPU.argtypes=[
+#     ctypes.c_void_p,                
+#     ctypes.c_void_p,                 
+#     ctypes.POINTER(ctypes.c_float),
+#     ctypes.POINTER(ctypes.c_float),  
+#     ctypes.POINTER(ctypes.c_float)   
+# ]
+# tensor_lib.tensor_evaluate_GPU.restype=ctypes.c_bool
+
+# tensor_lib.execution_node_to_host.argtypes=[ctypes.c_void_p]
+# tensor_lib.execution_node_to_host.restype=ctypes.c_bool
